@@ -71,7 +71,8 @@ After SDL3 updates, regenerate the CLAW bindings:
 
 ;; 2. Regenerate
 (pushnew :claw-regen-adapter *features*)
-(cffi:load-foreign-library #P"/home/jboehland/.local/lib/libresect.so")
+(cffi:load-foreign-library 
+  (merge-pathnames ".local/lib/libresect.so" (user-homedir-pathname)))
 (ql:quickload :render-stack-sdl3-ffi/wrapper :force t)
 (claw:load-wrapper :render-stack-sdl3-ffi)
 ```
