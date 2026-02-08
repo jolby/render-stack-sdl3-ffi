@@ -8,6 +8,9 @@
 *~
 .\#*
 
+src/lib/sdl/
+src/lib/build/
+
 # system dependent junk 
 local/
 
